@@ -1,20 +1,20 @@
 package com.luli.myfastframe.utils;
-
-import android.util.Log;
 import com.luli.myfastframe.base.AppConfig;
 import com.luli.myfastframe.base.Constants;
+import com.orhanobut.logger.Logger;
 
 /**
  * 日志工具类
  * Created by luli
  */
 public class LogUtil {
+
     /**
      * 打印网络请求日志
      */
     static public void request(String str) {
         if (AppConfig.debugFlag) {
-            Log.w(Constants.logRequest, str);
+            Logger.i(Constants.logRequest, str);
         }
     }
 
@@ -23,7 +23,7 @@ public class LogUtil {
      */
     static public void response(String str) {
         if (AppConfig.debugFlag)
-            Log.w(Constants.logResponse, str);
+            Logger.i(Constants.logResponse, str);
     }
 
     /**
@@ -31,7 +31,7 @@ public class LogUtil {
      */
     static public void logPersonalDebug(String name, String str) {
         if (AppConfig.debugFlag)
-            Log.i(name, str);
+            Logger.i(name, str);
     }
 
     /**
@@ -39,7 +39,7 @@ public class LogUtil {
      */
     static public void logDebug(String str) {
         if (AppConfig.debugFlag)
-            Log.i(Constants.logDebug, str);
+            Logger.i(Constants.logDebug, str);
     }
 
 
@@ -49,7 +49,7 @@ public class LogUtil {
     static public void logError(String str) {
 
         if (AppConfig.debugFlag) {
-            Log.e(Constants.logError, str);
+            Logger.e(Constants.logError, str);
         }
     }
 

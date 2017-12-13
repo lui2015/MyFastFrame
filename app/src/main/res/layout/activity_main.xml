@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.luli.myfastframe.MainActivity">
+    tools:context="com.luli.myfastframe.MainActivity"
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/text1"
@@ -12,4 +13,25 @@
         android:layout_height="wrap_content"
         android:text="测试webview"/>
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:text="hello" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="Enter your name here"
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Say hello!"
+        android:layout_below="@+id/editText"
+        android:onClick="sayHello"/>
+
+
+
+
+
+</LinearLayout>

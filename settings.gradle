@@ -1,1 +1,1 @@
-include ':app', ':netlibrary', ':webviewlibrary'
+include ':app', ':baselibrary'
